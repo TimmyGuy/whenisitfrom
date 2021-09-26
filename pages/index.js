@@ -24,7 +24,7 @@ export default function Home() {
                     {' '}title
                 </p>
 
-                <SearchBar />
+                <SearchBar/>
 
             </main>
 
