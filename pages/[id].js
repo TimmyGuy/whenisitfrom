@@ -55,7 +55,6 @@ export async function getStaticPaths({params}) {
     return {
         paths: [
             {params: {id: '11'}},
-            {params: {id: '181812'}}
         ],
         fallback: true
     }
