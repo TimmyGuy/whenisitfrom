@@ -2,6 +2,7 @@ import Footer from "../components/ui/Footer";
 import SearchBar from "../components/input/SearchBar";
 import Image from "next/image";
 import MovieInformation from "../components/movie/MovieInformation";
+import Head from "next/head";
 
 export default function FeelOld({title}) {
 
@@ -12,6 +13,10 @@ export default function FeelOld({title}) {
 
     return (
         <div>
+            <Head>
+                <title>{title.title} - When is it from?</title>
+                <meta name="description" content={"Movie: " + title.title + ", Release date: " + title.release_date + ", Tagline: " + title.tagline} />
+            </Head>
             <div className="flex justify-center p-4 items-center border-b">
                 <h4 className="text-xl font-bold text-gray-800 h-full pr-4">When is it from?</h4>
                 <SearchBar/>
