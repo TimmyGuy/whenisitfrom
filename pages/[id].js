@@ -2,6 +2,7 @@ import Footer from "../components/ui/Footer";
 import SearchBar from "../components/input/SearchBar";
 import Image from "next/image";
 import MovieInformation from "../components/movie/MovieInformation";
+import Head from "next/head";
 
 export default function FeelOld({title}) {
 
