@@ -12,6 +12,9 @@ export default function FeelOld({title}) {
 
     return (
         <div>
+            <Head>
+                <title>{title.title} - When is it from?</title>
+            </Head>
             <div className="flex justify-center p-4 items-center border-b">
                 <h4 className="text-xl font-bold text-gray-800 h-full pr-4">When is it from?</h4>
                 <SearchBar/>
