@@ -24,7 +24,9 @@ export default function Home() {
                     {' '}title
                 </p>
 
-                <SearchBar/>
+                <div className="px-2">
+                    <SearchBar/>
+                </div>
 
             </main>
 
