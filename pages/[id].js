@@ -1,20 +1,9 @@
 import Footer from "../components/ui/Footer";
 import SearchBar from "../components/input/SearchBar";
 import Image from "next/image";
-import {StarIcon as StarIconFilled} from "@heroicons/react/solid";
-import {StarIcon as StarIconEmpty} from "@heroicons/react/outline";
+import MovieInformation from "../components/movie/MovieInformation";
 
 export default function FeelOld({title}) {
-
-    function starRating(stars) {
-        stars = Math.round(stars);
-        return (
-            <>
-                {[...Array(stars)].map((e, i) => <StarIconFilled className="h-6 text-yellow-500" key={i}/>)}
-                {[...Array(5 - stars)].map((e, i) => <StarIconEmpty className="h-6 text-yellow-500" key={i}/>)}
-            </>
-        )
-    }
 
     function prettyDate(date) {
         const fullDate = new Date(Date.parse(date));
@@ -28,28 +17,24 @@ export default function FeelOld({title}) {
                 <SearchBar/>
             </div>
             {title &&
-            <main className="flex flex-col items-center justify-center p-8 ">
+            <main className="flex flex-col items-center justify-center p-1 md:p-8 ">
                 <div className="grid grid-cols-3 grid-rows-3 max-w-7xl">
-                    <div className="col-span-1 row-span-2 p-4">
+                    <div className="col-span-1 row-span-1 md:row-span-2 p-1 md:p-4">
                         <Image src={"https://image.tmdb.org/t/p/original/" + title.poster_path} alt={title.title}
                                className="max-w-full rounded-xl" width={400} height={600}/>
                     </div>
-                    <div className="col-span-2 row-span-3 pt-8">
+                    <div className="col-span-2 md:hidden">
+                        <MovieInformation title={title} />
+                    </div>
+                    <div className="col-span-3 md:col-span-2 row-span-3 pt-2 md:pt-8">
                         <h2 className="text-3xl font-medium">Release date</h2>
                         <h2 className="text-5xl font-bold pb-2">{prettyDate(title.release_date)}</h2>
                         <div>
 
                         </div>
                     </div>
-                    <div className="p-4 ">
-                        <h1 className="text-4xl font-bold">{title.title}</h1>
-                        {title.tagline && <span>{title.tagline}</span>}
-                        <div className="flex py-1 pt-2">
-                            {starRating(title.vote_average / 2)}{' '} <small
-                            className="pl-1">({title.vote_count} votes)</small>
-                        </div>
-                        {title.homepage &&
-                        <a href={title.homepage} className="text-blue-500" target="_blank">Visit homepage &rarr;</a>}
+                    <div className="hidden md:block">
+                        <MovieInformation title={title} />
                     </div>
                 </div>
             </main>

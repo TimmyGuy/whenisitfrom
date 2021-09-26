@@ -62,10 +62,10 @@ export default function SearchBar() {
                     {suggestions.map(suggestion => (
                             <Link key={suggestion.id} href={"/" + suggestion.id}>
                                 <a className="p-1 flex" onClick={clearSearchBar}>
-                                    <img
+                                    {suggestion.poster_path && <img
                                         src={"https://image.tmdb.org/t/p/original/" + suggestion.poster_path}
                                         alt={suggestion.title}
-                                        className="w-20"/>
+                                        className="w-20"/>}
                                     <div className="ml-1 text-left max-h-28 overflow-hidden">
                                         <strong className="block">{suggestion.title}</strong>
                                         {suggestion.overview}
