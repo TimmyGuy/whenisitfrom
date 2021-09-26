@@ -9,6 +9,7 @@ export default function Home() {
             <Head>
                 <title>When is it from?</title>
                 <link rel="icon" href="/favicon.ico"/>
+                <meta name="description" content="When is it from? Discover the release dates of movies. Compare passed time to feel older. A lot of time has passed since some of our favorite movies came out." />
             </Head>
 
             <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
