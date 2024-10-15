@@ -9,7 +9,10 @@ export default function Home() {
             <Head>
                 <title>When is it from?</title>
                 <link rel="icon" href="/favicon.ico"/>
-                <meta name="description" content="When is it from? Discover the release dates of movies. Compare passed time to feel older. A lot of time has passed since some of our favorite movies came out." />
+                <meta name="description"
+                      content="When is it from? Discover the release dates of movies. Compare passed time to feel older. A lot of time has passed since some of our favorite movies came out."/>
+                <script defer src="https://analytics.apps.ohlsensoftware.com/script.js"
+                        data-website-id="67fca1ee-9f4d-45bf-a1fd-a650b857b21d"></script>
             </Head>
 
             <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
