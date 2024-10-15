@@ -1,5 +1,5 @@
-import {StarIcon as StarIconFilled} from "@heroicons/react/solid";
-import {StarIcon as StarIconEmpty} from "@heroicons/react/outline";
+import {StarIcon as StarIconFilled} from "@heroicons/react/24/solid";
+import {StarIcon as StarIconEmpty} from "@heroicons/react/24/outline";
 
 export default function MovieInformation({title}) {
     function starRating(stars) {
